@@ -1,30 +1,37 @@
-# Catalogo de Produtos - React Lab
+# 🛒 Catálogo de Produtos - React Lab
 
-Aplicação React desenvolvida para demonstrar os conceitos fundamentais de front-end com React: **State e useState**, **Formulários**, **useEffect**, **Consumo de APIs** e **React Router**.
+Aplicação React desenvolvida como trabalho prático da disciplina de Framework Front-End, demonstrando os conceitos fundamentais de desenvolvimento de interfaces modernas com React.
 
-## Descrição
+## 🔗 Links
 
-Catálogo de produtos consumindo a FakeStoreAPI. O usuário pode navegar pela lista de produtos, visualizar detalhes de um item específico e cadastrar novos produtos por meio de um formulário. A navegação entre as páginas é feita com React Router, sem recarregar o navegador.
+- **Repositório:** https://github.com/MatheusAlves08/react-lab-catalogo-conceitos-2
+- **Deploy (Vercel):** https://react-lab-catalogo-conceitos-2.vercel.app/
 
-## Funcionalidades
+## 📝 Descrição
 
-- **Listagem de produtos**: exibe os produtos consumidos da API em um grid responsivo.
-- **Detalhe do produto**: página dedicada com imagem, descrição, categoria e preço do produto selecionado.
-- **Cadastro de produto**: formulário controlado para enviar um novo produto para a API.
-- **Navegação entre páginas**: roteamento cliente-side com React Router (início, produtos, detalhe e cadastro).
-- **Tratamento de estados de carregamento e erro**: mensagens de carregamento e erro durante o consumo da API.
+Catálogo de produtos completo consumindo a FakeStoreAPI. A aplicação permite navegar por páginas, listar produtos, visualizar detalhes de itens específicos e cadastrar novos produtos por meio de um formulário controlado. Toda a navegação é feita client-side com React Router, sem recarregar o navegador.
 
-## Conceitos utilizados
+## ✨ Funcionalidades
+
+- **Página inicial** com Hero section, destaques de categorias e estatísticas da loja
+- **Listagem de produtos** em grid responsivo, consumindo dados da FakeStoreAPI
+- **Detalhe do produto** com imagem, categoria, descrição e preço
+- **Cadastro de produto** por formulário controlado com envio via POST para a API
+- **Navegação entre páginas** com React Router (início, produtos, detalhe e cadastro)
+- **Tratamento de estados** de carregamento e erro durante o consumo da API
+- **Design responsivo** adaptado para mobile, tablet e desktop
+
+## 🎓 Conceitos Utilizados
 
 | Conceito | Onde é aplicado |
 |----------|-----------------|
-| **State e useState** | Gerenciamento de estado local (lista de produtos, formulário, carregamento, erro) em `Home`, `ProductDetail` e `AddProduct`. |
-| **Formulários** | Formulário controlado de cadastro de produto em `AddProduct.jsx`, com `handleChange` e `handleSubmit`. |
-| **useEffect** | Busca de dados da API ao montar o componente e limpeza com `abort controller` pattern (variável `ignorar`) em `Home` e `ProductDetail`. |
-| **Consumo de APIs** | Requisições `fetch` para `https://fakestoreapi.com/products` (listagem, detalhe por ID e criação via POST). |
-| **React Router** | `BrowserRouter`, `Routes`, `Route`, `Link`, `useParams` e `useNavigate` em `App.jsx`, `Navbar` e nas páginas. |
+| **State e useState** | Gerenciamento de estado local (lista de produtos, formulário, carregamento, erro) em `Inicio`, `ProductsList`, `ProductDetailView` e `AddProduct` |
+| **Formulários** | Formulário controlado de cadastro de produto em `AddProduct.jsx`, com `handleChange` e `handleSubmit` |
+| **useEffect** | Busca de dados da API ao montar o componente e limpeza com pattern de cancelamento em `ProductsList` e `ProductDetailView` |
+| **Consumo de APIs** | Requisições `fetch` para `https://fakestoreapi.com/products` (listagem, detalhe por ID e criação via POST) |
+| **React Router** | `BrowserRouter`, `Routes`, `Route`, `Link`, `useParams` e `useNavigate` em `App.jsx`, `Navbar` e nas páginas |
 
-## Estrutura do projeto
+## 📁 Estrutura do Projeto
 
 ```
 src/
@@ -34,14 +41,21 @@ src/
   components/
     Navbar.jsx         # Barra de navegação com Link
   pages/
-    Home.jsx           # Listagem (useState, useEffect, fetch)
-    ProductDetail.jsx  # Detalhe (useParams, useEffect, fetch)
+    Inicio.jsx         # Página inicial com hero e destaques
+    ProductsList.jsx   # Listagem de produtos (useState, useEffect, fetch)
+    ProductDetailView.jsx  # Detalhe do produto (useParams, useEffect, fetch)
     AddProduct.jsx     # Formulário de cadastro (useState, formulário, POST)
 ```
 
-## Como executar
+## 🚀 Como Executar
 
 ```bash
+# Clonar o repositório
+git clone https://github.com/MatheusAlves08/react-lab-catalogo-conceitos-2.git
+
+# Acessar a pasta do projeto
+cd react-lab-catalogo-conceitos-2
+
 # Instalar dependências
 npm install
 
@@ -55,9 +69,14 @@ npm run build
 npm run preview
 ```
 
-## Tecnologias
+## 🛠️ Tecnologias
 
 - React 19
 - Vite
 - React Router DOM 7
 - FakeStoreAPI (https://fakestoreapi.com)
+- CSS3 com variáveis CSS e design responsivo
+
+## 👨‍💻 Autor
+
+Matheus Alves - Estudante de Sistemas de Informação
